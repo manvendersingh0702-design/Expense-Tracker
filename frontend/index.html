@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ============================= -->
+        <!-- Expense Tracker Heading -->
+        <!-- ============================= -->
+
+        <h1>Expense Tracker</h1>
+
+
+        <!-- ============================= -->
+        <!-- Balance Section -->
+        <!-- ============================= -->
+
+        <div class="balance-Box">
+
+            <h2>Current Balance</h2>
+
+            <h1 id="balance">₹0</h1>
+
+        </div>
+
+
+        <!-- ============================= -->
+        <!-- Income & Expense Summary -->
+        <!-- ============================= -->
+
+        <div class="summary">
+
+            <!-- Total Income -->
+
+            <div class="income">
+
+                <h3>Total Income</h3>
+
+                <p id="income">₹0</p>
+
+            </div>
+
+
+            <!-- Total Expense -->
+
+            <div class="expense">
+
+                <h3>Total Expense</h3>
+
+                <p id="expense">₹0</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ============================= -->
+        <!-- Add / Update Transaction Form -->
+        <!-- ============================= -->
+
+        <div class="form-section">
+
+            <h2>Add Transaction</h2>
+
+
+            <form id="transactionForm">
+
+
+                <!-- Title -->
+
+                <label for="title">
+                    Title
+                </label>
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Enter title"
+                    required
+                >
+
+
+                <!-- Amount -->
+
+                <label for="amount">
+                    Amount
+                </label>
+
+                <input
+                    type="number"
+                    id="amount"
+                    placeholder="Enter amount"
+                    min="1"
+                    required
+                >
+
+
+                <!-- Type -->
+
+                <label for="type">
+                    Type
+                </label>
+
+                <select id="type">
+
+                    <option value="Income">
+                        Income
+                    </option>
+
+                    <option value="Expense">
+                        Expense
+                    </option>
+
+                </select>
+
+
+                <!-- Category -->
+
+                <label for="category">
+                    Category
+                </label>
+
+                <select id="category">
+
+                    <option value="Salary">
+                        Salary
+                    </option>
+
+                    <option value="Food">
+                        Food
+                    </option>
+
+                    <option value="Travel">
+                        Travel
+                    </option>
+
+                    <option value="Shopping">
+                        Shopping
+                    </option>
+
+                    <option value="Entertainment">
+                        Entertainment
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+
+                <!-- Date -->
+
+                <label for="date">
+                    Date
+                </label>
+
+                <input
+                    type="date"
+                    id="date"
+                    required
+                >
+
+
+                <!-- Submit Button -->
+
+                <button
+                    type="submit"
+                    id="submitBtn"
+                >
+                    Add Transaction
+                </button>
+
+
+            </form>
+
+        </div>
+
+
+        <!-- ============================= -->
+        <!-- Transaction History -->
+        <!-- ============================= -->
+
+        <div class="history">
+
+            <h2>Transaction History</h2>
+
+
+            <table>
+
+                <!-- Table Header -->
+
+                <thead>
+
+                    <tr>
+
+                        <th>Date</th>
+
+                        <th>Title</th>
+
+                        <th>Category</th>
+
+                        <th>Type</th>
+
+                        <th>Amount</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <!-- Transaction Data -->
+
+                <tbody id="transactionList">
+
+                    <!-- JavaScript will add transactions here -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
